@@ -6,56 +6,57 @@
 /*   By: saydilek <saydilek@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 09:18:49 by saydilek          #+#    #+#             */
-/*   Updated: 2026/08/28 10:37:07 by saydilek         ###   ########.fr       */
+/*   Updated: 2026/09/03 20:47:19 by saydilek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
+	if(!s)
+		return (0);
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }
 
-char *ft_find_newline(char *s)
+char	*ft_find_newline(char *s)
 {
-	int i;
+	int	i;
 
+	if(!s)
+		return (NULL);
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-		if(s[i] == '\n')
+		if (s[i] == '\n')
 			return (&(s[i]));
 		i++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	char	*result;
-	char	*start;
+	char *result;
+	char *start;
 
 	result = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	start = result;
-	while (*s1 != '\0')
+	if (s1)
 	{
-		*result = *s1;
-		result++;
-		s1++;
+		while(*s1)
+			*result++ = *s1++;
 	}
-	while (*s2 != '\0')
+	while (*s2)
 	{
-		*result = *s2;
-		result++;
-		s2++;
+		*result++ = *s2++;
 	}
 	*result = '\0';
 	return (start);
