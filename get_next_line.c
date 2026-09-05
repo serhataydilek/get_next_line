@@ -6,7 +6,7 @@
 /*   By: saydilek <saydilek@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 09:18:21 by saydilek          #+#    #+#             */
-/*   Updated: 2026/09/05 16:20:58 by saydilek         ###   ########.fr       */
+/*   Updated: 2026/09/05 16:52:23 by saydilek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,3 @@ char	*get_next_line(int fd)
 	free(temp);
 	return (line);
 }
-// read line correct
-// null there is nothing else to read or an error occurred
