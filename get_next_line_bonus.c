@@ -6,14 +6,13 @@
 /*   By: saydilek <saydilek@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 16:09:37 by saydilek          #+#    #+#             */
-/*   Updated: 2026/09/09 16:09:37 by saydilek         ###   ########.fr       */
+/*   Updated: 2026/09/10 17:14:31 by saydilek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-static char	*ft_read_chunk(int fd, char *stash,
-		char *buffer, ssize_t *bytes)
+static char	*ft_read_chunk(int fd, char *stash, char *buffer, ssize_t *bytes)
 {
 	char	*temp;
 
